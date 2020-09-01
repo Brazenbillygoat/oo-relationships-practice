@@ -8,7 +8,7 @@ class Bakery
         
     @@all = []
             
-     ef initialize(name)
+    def initialize(name)
         @name = name
         @@all << self
     end
@@ -18,9 +18,9 @@ class Bakery
     end
         
     def ingredients
-        Dessert.all.each do |int_ing|
-        # binding.pry
-        p int_ing.ingredient
+        Recipe.all.each do |int_ing|
+        p int_ing.ingredients
+        
         end
     end
         

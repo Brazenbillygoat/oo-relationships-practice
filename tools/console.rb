@@ -8,14 +8,21 @@ end
 pels = Bakery.new("Pels")
 
 bun = Dessert.new("Cinnamon Bun")
-buns_ing = Ingredient.new("Cinnamon")
-buns_ing1 = Ingredient.new("Sugar")
-buns_ing2 = Ingredient.new("Dough")
-
 croissant = Dessert.new("Croissant")
-cro_ing = Ingredient.new("Flour")
-cro_ing1 = Ingredient.new("Butter")
-cro_ing2 = Ingredient.new("Sugar")
+
+cinnamon = Ingredient.new("Cinnamon")
+sugar = Ingredient.new("Sugar")
+dough = Ingredient.new("Dough")
+flour = Ingredient.new("Flour")
+butter = Ingredient.new("Butter")
 
 
-binding.pry
+Recipe.new(bun, dough)
+Recipe.new(bun, sugar)
+Recipe.new(bun, cinnamon)
+Recipe.new(croissant, [flour, butter, sugar])
+
+pels.ingredients
+
+
+# binding.pry
