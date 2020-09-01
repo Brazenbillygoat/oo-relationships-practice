@@ -17,12 +17,17 @@ flour = Ingredient.new("Flour")
 butter = Ingredient.new("Butter")
 
 
-Recipe.new(bun, dough)
-Recipe.new(bun, sugar)
-Recipe.new(bun, cinnamon)
+
+
+Recipe.new(bun, [dough, sugar, cinnamon])
+# Recipe.new(bun, dough)
+# Recipe.new(bun, sugar)
+# Recipe.new(bun, cinnamon)
 Recipe.new(croissant, [flour, butter, sugar])
 
-pels.ingredients
+# p pels.ingredients
 
+# p pels.desserts
 
+p pels.average_calories
 # binding.pry

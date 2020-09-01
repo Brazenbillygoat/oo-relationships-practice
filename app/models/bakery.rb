@@ -18,17 +18,30 @@ class Bakery
     end
         
     def ingredients
-        Recipe.all.each do |int_ing|
-        p int_ing.ingredients
-        
+        Recipe.all.each do |inst_ing|
+        inst_ing.ingredients
         end
     end
-        
-    def average_calories 
-        #totalling the avg number of calories
-        #should return a float
+
+    def desserts
+        Recipe.all.map do |inst_dessert|
+            # binding.pry
+        inst_dessert.dessert
+        end
     end
-        
+    
+    def average_calories 
+        avg_dessert_kcal = []
+        Recipe.all.each do |dessert|
+            total_kcal = 0
+            dessert.ingredients.each do |calorie|
+                total_kcal += calorie.calorie_count 
+            end
+            avg_dessert_kcal << total_kcal
+        end
+        avg_dessert_kcal
+    end
+    
     def shopping_list #a string of names for ingredients
         
     end

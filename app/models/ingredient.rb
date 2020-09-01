@@ -4,12 +4,13 @@
 class Ingredient
 
     attr_reader :name
+    attr_accessor :calorie_count
     
     @@all = []
 
     def initialize(name)
         @name = name
-        # @calorie_count = calorie_count
+        @calorie_count = 10
         @@all << self
     end
 

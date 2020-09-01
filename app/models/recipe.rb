@@ -9,9 +9,8 @@ class Recipe
     def initialize(dessert, ingredients)
         @dessert = dessert
         @ingredients = ingredients
-        @@all.each do |recipe|
-            if
-        end
+        # @@all.each do |recipe|
+        # end
         @@all.push(self)
     end
 
