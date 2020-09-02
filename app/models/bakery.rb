@@ -39,11 +39,27 @@ class Bakery
             end
             avg_dessert_kcal << total_kcal
         end
-        avg_dessert_kcal
+        tot = 0
+        avg_dessert_kcal.each do |small_avg|
+            tot += small_avg
+        end
+        tot / avg_dessert_kcal.count
     end
     
     def shopping_list #a string of names for ingredients
-        
+        list_for_shopping = ""
+        Recipe.all.each do |dessert|
+            # binding.pry
+            dessert.ingredients.each do |item|
+                # binding.pry
+                if list_for_shopping == ""
+                    list_for_shopping += item.name
+                else
+                    list_for_shopping += ", " + item.name
+                end
+            end
+        end
+        list_for_shopping
     end
         
 end
